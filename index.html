@@ -1,0 +1,45 @@
+<Doctype html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Url</th>
+                    <th>Icon</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="id">1</td>
+                    <td id="name">Kubernetes</td>
+                    <td id="url">http://www.sina.com.cn</td>
+                    <td id="img"><img src="http://someurl/logo.png"/></td>
+                    <td>
+                        <button id="edit" name="edit" onclick="getValue(this)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="/home/jacob/workspace/connpaas/static/js/jquery-3.2.1.min.js" type=text/javascript></script>
+        <script type="text/javascript">
+            function getValue(dom){
+                a_tr = $(dom).closest("tr");
+                console.log(a_tr.length);
+                console.log(a_tr.eq(0).find("#id").text());
+                console.log(a_tr.eq(0).find("#name").text());
+                console.log(a_tr.eq(0).find("#url").text());
+                console.log(a_tr.eq(0).find("#img").find(img).eq(0).src);
+            }
+            function showMsg(msg){
+                console.log(msg);
+            }
+            $().ready(function(){
+            })
+        </script>
+
+    </body>
